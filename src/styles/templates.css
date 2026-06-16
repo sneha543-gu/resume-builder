@@ -1,0 +1,260 @@
+/* ─── Template Print Styles ───────────────────────────────────────────────── */
+
+.resume-template {
+  width: 794px;
+  min-height: 1123px;        /* A4 height — can grow beyond for page 2 */
+  background: white;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+  box-sizing: border-box;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Two-column sidebar layouts: sidebar bg must stretch full height ─────── */
+/*   The outer wrapper is a flex-row. The sidebar should grow to fill the     */
+/*   available height of the container automatically via align-stretch.        */
+
+.resume-template-sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* makes sidebar stretch to tallest column height */
+  min-height: 1123px;
+}
+
+.resume-template-sidebar {
+  align-self: stretch;  /* sidebar bg fills full height even when right col is longer */
+  min-height: 100%;
+}
+
+/* ── Minimalist Clean (Michael Harris Style) ── */
+.tpl-minimal-clean {
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+.tpl-minimal-clean h1 { font-family: 'Poppins', sans-serif; letter-spacing: -0.02em; }
+.tpl-minimal-clean .section-header {
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* ── Modern Teal (Andrew Clark Style) ── */
+.tpl-modern-teal {
+  font-family: 'Inter', sans-serif;
+}
+.tpl-modern-teal .sidebar {
+  background: #004d4d;
+  color: #fff;
+}
+.tpl-modern-teal .accent-text { color: #008080; }
+
+/* ── Common Professional Utilities ── */
+.bullet-list {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.bullet-list li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 4px;
+}
+.bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: currentColor;
+  opacity: 0.7;
+}
+
+
+.tpl-modern-minimal .tpl-title {
+  font-size: 15px;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.tpl-modern-minimal .tpl-divider {
+  height: 3px;
+  background: var(--grad-primary);
+  border-radius: 2px;
+  margin: 20px 0;
+}
+
+.tpl-modern-minimal .tpl-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ── Corporate Pro ── */
+.tpl-corporate-pro {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 1123px;
+}
+
+.tpl-corporate-pro .tpl-sidebar {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 40px 24px;
+}
+
+.tpl-corporate-pro .tpl-main {
+  padding: 40px 36px;
+  background: #ffffff;
+}
+
+.tpl-corporate-pro .tpl-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.tpl-corporate-pro .tpl-title-sidebar {
+  font-size: 11px;
+  color: #818cf8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+.tpl-corporate-pro .tpl-section-title-sidebar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #818cf8;
+  margin: 24px 0 8px;
+}
+
+.tpl-corporate-pro .tpl-section-title-main {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-primary);
+  margin-bottom: 14px;
+}
+
+/* ── Creative Designer ── */
+.tpl-creative {
+  padding: 0;
+}
+
+.tpl-creative .tpl-header {
+  background: var(--grad-primary);
+  color: white;
+  padding: 40px 48px;
+}
+
+.tpl-creative .tpl-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.tpl-creative .tpl-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0;
+}
+
+.tpl-creative .tpl-sidebar {
+  background: #f8fafc;
+  padding: 32px 28px;
+}
+
+.tpl-creative .tpl-main {
+  padding: 32px 36px;
+}
+
+.tpl-creative .tpl-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+/* ── Elegant Classic ── */
+.tpl-classic {
+  padding: 56px 64px;
+  background: #fffdf7;
+}
+
+.tpl-classic .tpl-header {
+  text-align: center;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.tpl-classic .tpl-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 0.04em;
+}
+
+.tpl-classic .tpl-title {
+  font-size: 13px;
+  color: #d4af37;
+  font-weight: 600;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.tpl-classic .tpl-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #1a1a2e;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+/* ─── Skill bar ─────────────────────────────────────────────────────────── */
+.skill-bar-track {
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  margin-top: 4px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #818cf8;
+}
+
+/* ── Dark Sidebar (AOSC style) ── */
+.tpl-dark-sidebar {
+  display: flex;
+  flex-direction: column;
+}
